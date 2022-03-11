@@ -41,14 +41,14 @@ export default function TimeShift({
   const [startTime, setStartTime] = useState(0);
   const [endTime, setEndTime] = useState(0);
   const handleChangeStartFrame = (e: React.ChangeEvent<HTMLInputElement>) =>
-    setStartTime(e.target.valueAsNumber);
+    setStartTime(e.target.value ? e.target.valueAsNumber : 0);
   const handleChangeEndFrame = (e: React.ChangeEvent<HTMLInputElement>) =>
-    setEndTime(e.target.valueAsNumber);
+    setEndTime(e.target.value ? e.target.valueAsNumber : 0);
 
   // time
   const [shiftTime, setShiftTime] = useState(0);
   const handleChangeShiftTime = (e: React.ChangeEvent<HTMLInputElement>) =>
-    setShiftTime(e.target.valueAsNumber);
+    setShiftTime(e.target.value ? e.target.valueAsNumber : 0);
 
   // submit
   const submitTimeShift = async (e: React.ChangeEvent<HTMLFormElement>) => {
